@@ -1,0 +1,28 @@
+
+//pallete of colors
+
+$primary-background-color: #361D32;
+
+$second-NumberButtons-color: #fafafa;
+
+$third-OperationButtons-color: #ED564F;
+
+/* principal layout for the app */
+
+.main{
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.main__container{
+    background-color: $primary-background-color ;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: 30vh 1fr;
+    grid-template-columns: 100vw;
+
+
+}
