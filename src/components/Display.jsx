@@ -6,9 +6,15 @@ const Display = () => {
     return ( 
         <>
         <div className="display__container">
-
-            <p>DISPLAY</p>
             
+            <div className="display__operation">
+                4400 + 100
+            </div>       
+                
+            <div className="display__result">
+                4500
+            </div>
+                        
         </div>
 
         </>

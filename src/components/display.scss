@@ -1,5 +1,27 @@
-.display__container{
-    border: solid 1px white;
-    
+$second-NumberButtons-color: #fafafa;
 
+.display__container {
+    color: $second-NumberButtons-color;
+    display: grid;
+    grid-template-rows: 65% 1fr;
+    grid-template-columns: 92.5vw;
+    gap: 3% 0%;
+    .display__result {
+        font-family: "Open Sans", sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .display__operation {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        color:#fafafa7c;
+    }
 }

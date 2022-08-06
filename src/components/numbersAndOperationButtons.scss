@@ -1,0 +1,56 @@
+$second-NumberButtons-color: #fafafa;
+
+$first-row-color-and-end-column: #2b1227;
+
+$first-row-color-and-end-column-borderColor: #2b1226;
+
+$background-colorNumbers: #492D44 ;
+
+$border-radius-buttons: 5px;
+
+$third-OperationButtons-color-firstRow-EndColumn: #ed564f;
+
+//display grid in the father container
+.NumbersAndOperationButtons__container {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: $second-NumberButtons-color;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px 2px;
+
+    //all buttons
+    .NumbersAndOperationButtons__buttons {
+        font-size: 15px;
+        border-radius: $border-radius-buttons;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $background-colorNumbers;
+    }
+    //first row of buttons and end column. the first row start in the line 1 on rows, and end in the 2nd line. The end column start in the 4th line and end in the 5th line.
+    
+    .firstRowAndEndColumn__OfButtons {
+        background-color: $first-row-color-and-end-column;
+        color: $third-OperationButtons-color-firstRow-EndColumn;
+        box-shadow: 0.5px 0.5px $first-row-color-and-end-column-borderColor;
+    
+    }
+
+    .c__button {
+        color: white;
+    }
+
+    .equal__button {
+
+        background-color: $third-OperationButtons-color-firstRow-EndColumn;
+        
+        /*row start / column-start / row-end / column-end */
+        grid-area: 6 / 4 / 4 / 5;
+        font-weight: 100;
+        font-size:50px;
+    }
+
+   
+}

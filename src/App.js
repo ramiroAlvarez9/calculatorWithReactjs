@@ -10,6 +10,7 @@ function App() {
 
 
       <main className='main'>
+
         <div className='main__container'>
           
           <Display />
@@ -17,6 +18,7 @@ function App() {
           <NumbersAndOperationButtons />
         
         </div>
+        
       </main>
 
     </>
