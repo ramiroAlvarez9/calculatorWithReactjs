@@ -2,7 +2,9 @@ import React from 'react';
 import './display.scss'
 
 
-const Display = () => {
+const Display = ({numberValues}) => {
+
+    
     return ( 
         <>
         <div className="display__container">
@@ -12,7 +14,7 @@ const Display = () => {
             </div>       
                 
             <div className="display__result">
-                4500
+                {numberValues}
             </div>
                         
         </div>
