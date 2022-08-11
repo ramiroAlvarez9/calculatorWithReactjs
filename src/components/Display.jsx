@@ -2,8 +2,7 @@ import React from 'react';
 import './display.scss'
 
 
-const Display = ({ numberValues,actualOperation }) => {
-
+const Display = ({ numberValues, actualOperation, errorOperation }) => {
 
     return (
         <>
@@ -12,13 +11,15 @@ const Display = ({ numberValues,actualOperation }) => {
                 <div className="display__operation">
                     {actualOperation} =
                 </div>
-
                 <div className="display__result">
                     {
-
                         numberValues
-
                     }
+                </div>
+                <div className="display__error">
+
+                    {errorOperation}
+
                 </div>
 
             </div>

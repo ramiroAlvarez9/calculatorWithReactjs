@@ -20,7 +20,7 @@ $third-OperationButtons-color-firstRow-EndColumn: #ed564f;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 2px 2px;
-    max-width: 660px;
+    max-width: 560px;
 
     //all buttons
     .NumbersAndOperationButtons__buttons {
@@ -48,5 +48,12 @@ $third-OperationButtons-color-firstRow-EndColumn: #ed564f;
         grid-area: 6 / 4 / 4 / 5;
         font-weight: 100;
         font-size:50px;
+    }
+}
+
+@media (min-width: 720px) {
+    .NumbersAndOperationButtons__buttons{
+        background-color: transparent;
+
     }
 }

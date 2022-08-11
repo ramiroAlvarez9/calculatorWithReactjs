@@ -3,19 +3,19 @@ $second-NumberButtons-color: #fafafa;
 .display__container {
     color: $second-NumberButtons-color;
     display: grid;
-    grid-template-rows: 65% 1fr;
+    grid-template-rows: 65% 1fr 1fr;
     grid-template-columns: 92.5vw;
     gap: 3% 0%;
-
-
+    max-width: 660px;
+    
     .display__result {
         font-family: "Open Sans", sans-serif;
         font-size: 40px;
         font-weight: 700;
-
         height: 100%;
         display: flex;
         justify-content: flex-end;
+        max-width: 501px;
     }
     .display__operation {
         font-family: "Open Sans", sans-serif;
@@ -25,5 +25,20 @@ $second-NumberButtons-color: #fafafa;
         align-items: flex-end;
         justify-content: flex-end;
         color:#fafafa7c;
+        max-width: 500px;
     }
+    .display__error{
+        font-family: "Open Sans", sans-serif;
+        display: inherit;
+        justify-content: flex-end;
+        color: $second-NumberButtons-color;
+        max-width: 500px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    
+
+
 }

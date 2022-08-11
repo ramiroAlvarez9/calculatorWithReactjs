@@ -5,20 +5,34 @@ import NumbersAndOperationButtons from './components/NumbersAndOperationButtons'
 
 function App() {
 
+  const [errorOperation, setErrorOperation] = useState('')
+
   const [numberValues, setNumberValues] = useState([])
 
   const [actualOperation, setActualOperation] = useState(['Ans'])
 
-
   const extractValues = e => setNumberValues([...numberValues, e.target.innerText])
 
-  const deleteOperation = () => setNumberValues([])
+  function deleteOperation() {
+    /*clear the display__error. Delete all numbers in numberValues*/ 
+    setErrorOperation('')
+    setNumberValues([])
+  }
 
   function makeArithmeticOperation() {
-    /*Make the operation. Save the operation in the state "actualOperation" */ 
-    setActualOperation([numberValues.join('')])
+    /*Make the operation. Save the operation in the state "actualOperation" */
+    try {
 
-    setNumberValues([eval(numberValues.join(''))])
+      setActualOperation([numberValues.join('')])
+      setNumberValues([eval(numberValues.join(''))])
+      setErrorOperation('')
+
+    } catch (error) {
+
+      setActualOperation('Ans')
+      setErrorOperation('Malformed expression')
+    
+    }
   }
   function deleteLastElement() {
 
@@ -35,10 +49,10 @@ function App() {
 
         <div className='main__container'>
 
-
           <Display
             numberValues={numberValues}
             actualOperation={actualOperation}
+            errorOperation={errorOperation}
           />
 
           <NumbersAndOperationButtons

@@ -6,7 +6,6 @@ import './numbersAndOperationButtons.scss'
 const NumbersAndOperationButtons = ({extractValues,makeArithmeticOperation,deleteOperation, deleteLastElement}) => {
     return (
         <section className="NumbersAndOperationButtons__container">
-
             <div onClick = {deleteOperation} className="NumbersAndOperationButtons__buttons firstRowAndEndColumn__OfButtons c__button">c</div>
             <div onClick = {extractValues} className="NumbersAndOperationButtons__buttons firstRowAndEndColumn__OfButtons" > / </div>
             <div onClick = {extractValues} className="NumbersAndOperationButtons__buttons firstRowAndEndColumn__OfButtons"> * </div>
