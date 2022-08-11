@@ -2,11 +2,14 @@
 
 $primary-background-color: #361d32;
 
+$primary-background-color-desktop: #361d321e;
+
 /* principal layout for the app */
 
 .main {
     width: 100vw;
     height: 100vh;
+    
 }
 
 .main__container {
@@ -16,4 +19,19 @@ $primary-background-color: #361d32;
     width: 100%;
     grid-template-rows: 40vh 1fr;
     grid-template-columns: 100vw;
+    max-width: 660px;
+    max-height:940px;
+}
+
+@media (min-width: 720px) {
+
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-background-color-desktop;       
+    }
+
+
+
 }
